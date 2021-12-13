@@ -145,11 +145,11 @@ class OHLC:
                 candles.append(
                     {
                         "datetime": time,
-                        "open": float(open),
-                        "high": float(high),
-                        "low": float(low),
-                        "close": float(close),
-                        "volume": float(volume),
+                        "open": float(open) if open is not None else None,
+                        "high": float(high) if high is not None else None,
+                        "low": float(low) if low is not None else None,
+                        "close": float(close) if close is not None else None,
+                        "volume": float(volume) if volume is not None else None,
                     }
                 )
 
